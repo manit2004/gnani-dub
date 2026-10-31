@@ -2,6 +2,8 @@
 
 `gnani-dub` is a Chrome extension that dubs YouTube videos into Indian languages as they play, using [Gnani](https://docs.gnani.ai) for speech and [Sarvam](https://docs.sarvam.ai) for translation. Built for Gnani's [Great Indian AI Internship Challenge](https://www.gnani.ai/internship).
 
+**Solution pitch (1 page):** [docs/pitch.pdf](docs/pitch.pdf)
+
 ## Requirements
 
 - [uv](https://docs.astral.sh/uv/)
