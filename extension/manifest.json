@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "Gnani Live Dub",
+  "version": "0.1.1",
+  "description": "Dub YouTube videos into Indian languages as they play, with Gnani AI voices and Sarvam translation.",
+  "minimum_chrome_version": "111",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "http://localhost/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "page/capture.js",
+        "page/transcript.js",
+        "page/main.js"
+      ],
+      "world": "MAIN",
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "captions.js",
+        "content/common.js",
+        "content/ui.js",
+        "content/dub.js",
+        "content/queue.js",
+        "content/prepare.js",
+        "content/listen.js",
+        "content/voice.js",
+        "content/main.js"
+      ],
+      "css": [
+        "overlay.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Gnani live dub (open on a YouTube video)"
+  }
+}

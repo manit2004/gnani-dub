@@ -1,0 +1,17 @@
+# Secrets
+.env
+
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+
+# Recordings and generated audio (personal voice data; never commit)
+data/*
+!data/.gitkeep
+server/cache/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

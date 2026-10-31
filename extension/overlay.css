@@ -1,0 +1,110 @@
+/* Gnani live dub overlay. Lives inside YouTube's player, so it follows the player's dark look. */
+
+.gnani-dub-button.ytp-button {
+  width: auto;
+  padding: 0 10px;
+  font: 700 12px/1 "YouTube Sans", Roboto, Arial, sans-serif;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  vertical-align: top;
+}
+.gnani-dubbing .gnani-dub-button.ytp-button { color: #ff8a3d; }
+.gnani-dub-button.gnani-dub-floating {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 70;
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: rgba(20, 20, 20, 0.85);
+  color: #fff;
+  font: 700 12px/1 Roboto, Arial, sans-serif;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.gnani-dubbing .gnani-dub-button.gnani-dub-floating { color: #ff8a3d; }
+
+.gnani-dub-panel {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 70;
+  width: 280px;
+  max-width: calc(100% - 24px);
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(20, 20, 20, 0.92);
+  color: #f1f1f1;
+  font: 13px/1.4 Roboto, Arial, sans-serif;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+}
+.gnani-dub-panel[hidden] { display: none; }
+.gnani-dub-title { font-weight: 600; font-size: 14px; margin-bottom: 10px; }
+.gnani-dub-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.gnani-dub-select {
+  flex: 1;
+  padding: 5px 6px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background: #2a2a2a;
+  color: #f1f1f1;
+  font: inherit;
+}
+.gnani-dub-check { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 8px; cursor: pointer; }
+.gnani-dub-check input { margin: 2px 0 0; accent-color: #ff8a3d; }
+.gnani-dub-check small { display: block; color: #aaa; font-size: 11px; }
+.gnani-dub-start {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px;
+  border: 0;
+  border-radius: 8px;
+  background: #ff8a3d;
+  color: #1a1a1a;
+  font: 600 13px Roboto, Arial, sans-serif;
+  cursor: pointer;
+}
+.gnani-dubbing .gnani-dub-start { background: #3a3a3a; color: #f1f1f1; }
+.gnani-dub-status { margin: 10px 0 0; color: #ccc; font-size: 12px; }
+.gnani-dub-status.gnani-dub-error { color: #ff8f8f; }
+
+.gnani-dub-subtitle {
+  position: absolute;
+  left: 50%;
+  bottom: 64px;
+  z-index: 60;
+  transform: translateX(-50%);
+  max-width: 80%;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(8, 8, 8, 0.78);
+  color: #fff;
+  font: 500 clamp(14px, 2.2vw, 26px)/1.35 Roboto, "Noto Sans", Arial, sans-serif;
+  text-align: center;
+  pointer-events: none;
+}
+.gnani-dub-subtitle[hidden] { display: none; }
+.ytp-autohide .gnani-dub-subtitle { bottom: 24px; }
+
+.gnani-dub-badge {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  z-index: 60;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  border-radius: 16px;
+  background: rgba(20, 20, 20, 0.85);
+  color: #ff8a3d;
+  font: 500 13px/1.3 Roboto, Arial, sans-serif;
+  pointer-events: none;
+}
+.gnani-dub-badge[hidden] { display: none; }
+
+/* Our translated subtitle replaces YouTube's own captions while dubbing. */
+.gnani-dubbing .ytp-caption-window-container { display: none !important; }
